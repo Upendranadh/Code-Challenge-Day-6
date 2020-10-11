@@ -8,9 +8,21 @@
 // 0 <= score < 60	'F'
 // Tested values are all between 0 and 100. Theres is no need to check for negative values or values greater than 100.
 
-
 // Write the function to find the getGrade obtained.
-function getGrade (s1, s2, s3) {
-   //your code here
+function getGrade(s1, s2, s3) {
+  //your code here
+  const mean = Math.floor((s1 + s2 + s3) / 3);
+  if (mean >= 90 && mean <= 100) {
+    return "A";
+  } else if (mean >= 80 && mean < 90) {
+    return "B";
+  } else if (mean >= 70 && mean < 80) {
+    return "C";
+  } else if (mean >= 60 && mean < 70) {
+    return "D";
+  } else if (mean >= 0 && mean < 60) {
+    return "F";
   }
+}
+
 //Use SpecRunner to check the Test Cases.
